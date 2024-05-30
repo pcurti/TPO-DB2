@@ -1,0 +1,8 @@
+# Environment variables
+.env
+
+# JetBrains IDE
+.idea
+
+# Mongo
+mongo/.env
