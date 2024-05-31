@@ -1,0 +1,27 @@
+services:
+  mongodb:
+    image: mongo:4.4
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+  app:
+    build: .
+    container_name: express-app
+    ports:
+      - "3000:3000"
+    environment:
+      - DATABASE=mongodb://mongodb:27017/musicdb
+      - DBNAME=musicdb
+      - COLLECTION=albums
+      - CSV_FILE_PATH=albumlist.csv
+      - PORT=3000
+      - HOST=0.0.0.0
+    command: npm start
+    depends_on:
+      - mongodb
+
+volumes:
+  mongo-data:
