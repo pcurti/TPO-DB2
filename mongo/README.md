@@ -13,9 +13,7 @@ ___
 
 
 
-[Dependencias](#Dependencias) 
-
-[Configuracion **.env** file](#Configuracion-env-file)
+[Dependencias](#Dependencias)
 
 [Ejecucion del programa](#Ejecucion-del-programa)
 
@@ -34,26 +32,13 @@ ___
 
 - `csv-parser`: Una biblioteca para analizar datos CSV en Node.js. Es basado en streams, por lo que es capaz de analizar archivos grandes con bajo consumo de memoria. La última versión es 3.0.0 y está licenciada bajo MIT. El costo es gratuito.
 
----
-
-## Configuracion **.env** file
-
-<pre style="color:white">
-DATABASE=mongodb://localhost:27017/musicdb 
-DBNAME=musicdb COLLECTION=albums 
-CSV_FILE_PATH=albumlist.csv
-PORT=3000
-HOST=localhost</pre>
-
----
-
 ## Ejecucion del programa
 
 Una vez instalado node, moverse a la carpeta mongo y ejecutar los siguientes comando:
 ```bash 
-npm install o npm i
+docker-compose build
 
-node app.js o npm start
+docker-compose up app
 ```
 ---
 

@@ -1,0 +1,10 @@
+a) 
+MATCH (p:Product) RETURN COUNT(p) as PRODUCT_COUNT
+b)
+MATCH (p:Product{productName: 'Queso Cabrales'}) RETURN p
+c)
+MATCH (c:Category {categoryName: 'Condimentes'})<-[r]-(p:Product)
+RETURN COUNT(p) as CONDIMENTS_PRODUCT_COUNT
+d)
+MATCH (s:Supplier{country:'UK'})-[r]->(p:Product)
+RETURN p ORDER BY p.unitPrice DESC LIMIT 3
