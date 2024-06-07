@@ -6,3 +6,4 @@
 
 # Mongo
 mongo/.env
+.vscode/settings.json
