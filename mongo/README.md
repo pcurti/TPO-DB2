@@ -34,11 +34,19 @@ ___
 
 ## Ejecucion del programa
 
-Una vez instalado node, moverse a la carpeta mongo y ejecutar los siguientes comando:
+Una vez instalado node, moverse a la carpeta "mongo" y ejecutar los siguientes comando:
 ```bash 
 docker-compose build
 
 docker-compose up app
+```
+
+
+Opcionalmente se puede utilizar el script "run.sh" para esto primero debemos otorgar permisos de ejecucion al script
+```bash
+chmod +x run.sh
+
+./run.sh
 ```
 ---
 
